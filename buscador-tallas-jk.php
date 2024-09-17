@@ -41,8 +41,9 @@ function buscador_tallas_form() {
 add_shortcode('buscador_tallas', 'buscador_tallas_form');
 
 // Cargar el JavaScript
-function cargar_buscador_tallas_script() {
-    wp_enqueue_script('buscador-tallas', plugin_dir_url(__FILE__) . 'buscador-tallas.js', array(), false, true);
+function agregar_estilos_buscador_tallas() {
+    wp_enqueue_style('estilos-buscador-tallas', plugin_dir_url(__FILE__) . 'buscador-tallas.css');
 }
-add_action('wp_enqueue_scripts', 'cargar_buscador_tallas_script');
+add_action('wp_enqueue_scripts', 'agregar_estilos_buscador_tallas');
+
 ?>
